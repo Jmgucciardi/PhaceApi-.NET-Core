@@ -23,7 +23,7 @@ namespace PhaceApi
         public static void Main(string[] args)
         {
             string SUBSCRIPTION_KEY = Environment.GetEnvironmentVariable("FACE_SUBSCRIPTION_KEY");
-            string URIBASE = Environment.GetEnvironmentVariable("FACE_ENDPOINT");
+            string URIBASE = Environment.GetEnvironmentVariable("FACE_ENDPOINT" + "/face/v1.0");
 
             Authenticate(URIBASE, SUBSCRIPTION_KEY);
             

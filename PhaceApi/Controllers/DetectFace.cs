@@ -15,6 +15,7 @@ namespace PhaceApi.Controllers
     {
         // GET: api/<DetectFace>
         [HttpGet]
+        [Route("Detect")]
         public IEnumerable<string> Get()
         {
             return new string[] { "value1", "value2" };
@@ -28,10 +29,11 @@ namespace PhaceApi.Controllers
         }
 
         // POST api/<DetectFace>
-        [HttpPost("DetectFace")]
-        public async Task<ActionResult> Create(string url)
+        [HttpPost]
+        [Route("PostDetect")]
+        public IEnumerable<string> Create(string url)
         {
-           
+            return new string[] { "post", "request" };
         }
 
         // PUT api/<DetectFace>/5
